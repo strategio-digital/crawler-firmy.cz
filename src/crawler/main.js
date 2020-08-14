@@ -17,8 +17,10 @@ Apify.main(async () => {
         const crawler = new Apify.PuppeteerCrawler({
             requestQueue,
             //maxRequestsPerCrawl: 30,
-            //maxRequestRetries: 0,
+            maxRequestRetries: 2,
             maxConcurrency: 10,
+            minConcurrency: 3,
+            gotoTimeoutSecs: 20,
             launchPuppeteerOptions: {
                 useChrome: false,
                 stealth: true,
@@ -41,7 +43,6 @@ Apify.main(async () => {
                 });
             },
         });
-
         await crawler.run();
     }
 });

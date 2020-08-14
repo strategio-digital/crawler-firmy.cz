@@ -11,6 +11,9 @@
 # Note that you can use any other image from Docker Hub.
 FROM apify/actor-node-chrome
 
+# Switch to root
+USER root
+
 # Second, copy just package.json and package-lock.json since they are the only files
 # that affect NPM install in the next step
 COPY package*.json ./
@@ -36,5 +39,4 @@ COPY . ./
 # that runs the Node.js source code using the command specified
 # in the "scripts.start" section of the package.json file.
 # In short, the instruction looks something like this:
-#
-CMD npm start
+CMD npm run start ; npm run merge
