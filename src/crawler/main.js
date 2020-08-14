@@ -4,11 +4,11 @@
  */
 
 const Apify = require('apify');
-const input = require('./../../apify_storage/key_value_stores/default/INPUT.json');
 const { listing, detail } = require('./route')
 
 Apify.main(async () => {
     const requestQueue = await Apify.openRequestQueue();
+    const input = await require('./../../apify_storage/key_value_stores/default/INPUT.json');
 
     for (const url of input.urls) {
         const dataset = await Apify.openDataset('prospects_' + (new Date()).getTime());
