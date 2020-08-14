@@ -22,7 +22,7 @@ Apify.main(async () => {
             launchPuppeteerOptions: {
                 useChrome: false,
                 stealth: true,
-                headless: true,
+                headless: true
             },
             handlePageFunction: async ({ page, request }) => {
                 //await Apify.utils.sleep(3 * 1000); // simulate delay
