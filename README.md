@@ -1,7 +1,11 @@
 # Firmy.cz crawler
 Firmy.cz listing & prospecting crawler based on Apify SDK
 
-## Example output for URL
+## Be more powerful with [contactio.app](https://www.contactio.app)
+After scraping - you can reach thousands of inboxes for free, just use [contactio.app](https://www.contactio.app). It's fully compatible. 
+
+
+## Sample crawler output for
 [https://www.firmy.cz/Remesla-a-sluzby/Remesla/Tesarstvi-pokryvacstvi-a-klempirstvi/kraj-jihocesky](https://www.firmy.cz/Remesla-a-sluzby/Remesla/Tesarstvi-pokryvacstvi-a-klempirstvi/kraj-jihocesky)
 
 ``` json
