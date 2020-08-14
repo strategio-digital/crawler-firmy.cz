@@ -20,7 +20,7 @@ Apify.main(async () => {
             maxRequestRetries: 2,
             maxConcurrency: 10,
             minConcurrency: 3,
-            gotoTimeoutSecs: 20,
+            gotoTimeoutSecs: 60,
             launchPuppeteerOptions: {
                 useChrome: false,
                 stealth: true,

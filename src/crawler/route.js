@@ -63,5 +63,5 @@ module.exports.detail = async ({ page, request, dataset }) => {
         }
     });
     await dataset.pushData({ result });
-    console.log(`Prospect: ${request.url}`);
+    console.log(`Prospecting: ${request.url}`);
 }

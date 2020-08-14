@@ -46,3 +46,6 @@ Firmy.cz listing & prospecting crawler based on Apify SDK
 ## Generate JSON output 
 1. Run `npm run merge` (only without docker)
 1. Get your file from `apify_storage/results/prospects_<xyz>.json`
+
+## Get prospects from remote server
+1. `scp root@<IP>:/root/crawler-firmy.cz/apify_storage/results/prospects_<xyz>.json ./`
