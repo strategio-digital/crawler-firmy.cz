@@ -1,0 +1,7 @@
+version: '3'
+services:
+  apify:
+    build: .
+    restart: "no"
+    volumes:
+      - ./apify_storage:/home/myuser/apify_storage

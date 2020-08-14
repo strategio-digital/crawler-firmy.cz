@@ -6,12 +6,9 @@
 		"apify": "^0.21.0",
 		"fs": "0.0.1-security"
 	},
-	"devDependencies": {
-		"@apify/eslint-config": "0.1.0",
-		"eslint": "^7.0.0"
-	},
 	"scripts": {
-		"start": "node src/crawler/main.js"
+		"start": "node src/crawler/main.js",
+		"merge": "node src/prospector/merge-prospects.js"
 	},
 	"author": "Jiří Zapletal",
 	"license": "ISC"
