@@ -29,6 +29,7 @@ Firmy.cz listing & prospecting crawler based on Apify SDK
 ```
 
 ## Installation
+1. `git clone git@github.com:strategio-digital/crawler-firmy.cz.git`
 1. `npm i`
 1. `npm i apify-cli -g`
 
