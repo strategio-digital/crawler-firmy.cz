@@ -30,7 +30,7 @@ Firmy.cz listing & prospecting crawler based on Apify SDK
 
 ## Installation
 1. `git clone git@github.com:strategio-digital/crawler-firmy.cz.git`
-1. `npm i` (use it without docker)
+1. `npm i` (only without docker)
 
 ## Setup and run
 1. Insert links in `apify_storage/key_value_store/default/INPUT.json`
@@ -44,5 +44,5 @@ Firmy.cz listing & prospecting crawler based on Apify SDK
 1. `npm run start` or `docker-compose up`
 
 ## Generate JSON output 
-1. Run `npm run merge`
+1. Run `npm run merge` (only without docker)
 1. Get your file from `apify_storage/results/prospects_<xyz>.json`
