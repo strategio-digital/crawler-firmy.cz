@@ -21,6 +21,7 @@ const mergeProspects = async ({ folder }) => {
     }
 
     fs.writeFileSync(`${dir}../results/${folder}.json`, JSON.stringify(data.prospects, null, 2));
+    console.log(`Prospects output created in apify_storage/results/${folder}.json`);
 };
 
 (async () => {
