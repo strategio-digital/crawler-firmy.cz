@@ -9,9 +9,9 @@ const { listing, detail } = require('./route')
 Apify.main(async () => {
     const requestQueue = await Apify.openRequestQueue();
     const input = await Apify.getInput();
-    const dataset = await Apify.openDataset('prospects');
 
     for (const url of input.urls) {
+        const dataset = await Apify.openDataset('prospects_' + (new Date()).getTime());
         await requestQueue.addRequest({ url: url + '?page=1'});
         const pseudoUrls = [new Apify.PseudoUrl(url + '?page=[.*]')];
         const crawler = new Apify.PuppeteerCrawler({
