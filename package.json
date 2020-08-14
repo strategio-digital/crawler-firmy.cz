@@ -1,0 +1,17 @@
+{
+	"name": "crawler-firmy.cz",
+	"version": "0.0.1",
+	"description": "Apify crawler for firmy.cz",
+	"dependencies": {
+		"apify": "^0.21.0"
+	},
+	"devDependencies": {
+		"@apify/eslint-config": "0.1.0",
+		"eslint": "^7.0.0"
+	},
+	"scripts": {
+		"start": "node src/main.js"
+	},
+	"author": "Jiří Zapletal",
+	"license": "ISC"
+}
