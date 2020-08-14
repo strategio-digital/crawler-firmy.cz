@@ -20,8 +20,9 @@ Apify.main(async () => {
             //maxRequestRetries: 0,
             maxConcurrency: 10,
             launchPuppeteerOptions: {
-                useChrome: true,
-                stealth: true
+                useChrome: false,
+                stealth: true,
+                headless: true,
             },
             handlePageFunction: async ({ page, request }) => {
                 //await Apify.utils.sleep(3 * 1000); // simulate delay
@@ -32,7 +33,13 @@ Apify.main(async () => {
                 } else {
                     return listing({ page, request, requestQueue, pseudoUrls });
                 }
-            }
+            },
+            handleFailedRequestFunction: async ({ request }) => {
+                console.log(`Request ${request.url} failed too many times`);
+                await Apify.pushData({
+                    '#debug': Apify.utils.createRequestDebugInfo(request),
+                });
+            },
         });
 
         await crawler.run();
