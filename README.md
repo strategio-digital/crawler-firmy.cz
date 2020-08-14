@@ -44,5 +44,5 @@ Firmy.cz listing & prospecting crawler based on Apify SDK
 1. `apify run`
 
 ## Generate JSON output 
-1. Run prospect `node src/prospector/merge-prospects.js`
-1. Just get your file from `apify_storage/results/prospects_<xyz>.json`
+1. Run `node src/prospector/merge-prospects.js`
+1. Get your file from `apify_storage/results/prospects_<xyz>.json`
