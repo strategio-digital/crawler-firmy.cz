@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) 2020 Wakers.cz
+ * @author Jiří Zapletal (https://www.wakers.cz, zapletal@wakers.cz)
+ */
+
 const Apify = require('apify');
 const { listing, detail } = require('./route')
 
@@ -11,7 +16,7 @@ Apify.main(async () => {
         const pseudoUrls = [new Apify.PseudoUrl(url + '?page=[.*]')];
         const crawler = new Apify.PuppeteerCrawler({
             requestQueue,
-            maxRequestsPerCrawl: 30,
+            //maxRequestsPerCrawl: 30,
             //maxRequestRetries: 0,
             maxConcurrency: 10,
             launchPuppeteerOptions: {
@@ -19,6 +24,7 @@ Apify.main(async () => {
                 stealth: true
             },
             handlePageFunction: async ({ page, request }) => {
+                //await Apify.utils.sleep(3 * 1000); // simulate delay
                 await Apify.utils.puppeteer.injectJQuery(page);
 
                 if (request.url.indexOf('/detail/') !== -1) {
